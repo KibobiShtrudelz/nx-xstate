@@ -1,0 +1,30 @@
+.board {
+  width: 100%;
+  padding: 0.5rem;
+  border: 5px solid;
+  border-radius: 1rem;
+  background-color: #ccc;
+
+  .table {
+    width: 50%;
+    height: 50%;
+    border-collapse: collapse;
+
+    .tbody {
+      & > tr {
+        & > td {
+          &:first-child {
+            width: 9%;
+            text-align: center;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+          }
+
+          width: 9%;
+          border: 1px solid;
+        }
+      }
+    }
+  }
+}
