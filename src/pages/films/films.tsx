@@ -4,5 +4,5 @@ export function Films(): JSX.Element {
   const films = useLoaderData();
   console.log('films', films);
 
-  return <div>FILMS</div>;
+  return <div>FILMS PAGE</div>;
 }
