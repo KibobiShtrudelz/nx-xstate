@@ -1,35 +1,13 @@
-import { useMachine } from '@xstate/react';
+import { RouterProvider } from 'react-router-dom';
 
-import NxWelcome from './nx-welcome';
+import { router } from '../router/router';
 
-import { toggleMachine } from '../state-machine';
-
-// import styles from './app.module.scss';
+import styles from './app.module.scss';
 
 export function App() {
-  const [state, send] = useMachine(toggleMachine);
-  console.log('state', state.context);
-
-  // const active = state.matches('active');
-
   return (
-    <>
-      <button
-        onClick={() => send({ type: 'INCREMENT', value: 99, time: new Date() })}
-      >
-        {state.value === 'inactive'
-          ? 'Click to activate'
-          : 'Active! Click to deactivate'}
-      </button>
-
-      <button type="button" onClick={() => null}>
-        LAINA
-      </button>
-
-      <NxWelcome title="learning-nx" />
-      <div />
-    </>
+    <div className={styles.app}>
+      <RouterProvider router={router} fallbackElement={<h1>FOLBEK!</h1>} />;
+    </div>
   );
 }
-
-export default App;
