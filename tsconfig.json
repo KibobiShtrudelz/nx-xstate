@@ -12,7 +12,12 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
+    "paths": {
+      "@pages": ["pages/index"],
+      "@router": ["router/router"],
+      "@components": ["components/index"]
+    },
     "jsx": "react-jsx",
     "allowJs": false,
     "esModuleInterop": false,
