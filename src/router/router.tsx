@@ -1,11 +1,11 @@
 import {
   createBrowserRouter,
   createRoutesFromElements,
-  Route,
-} from 'react-router-dom';
+  Route
+} from 'react-router-dom'
 
-import { Films } from '../pages';
-import { Error } from '../components';
+import { Films } from '@pages'
+import { Error } from '@components'
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,12 +13,12 @@ export const router = createBrowserRouter(
       path="/films"
       element={<Films />}
       loader={async function () {
-        return await fetch('https://swapi.dev/api/films');
+        return await fetch('https://swapi.dev/api/films')
       }}
       action={async function ({ request }) {
-        console.log(`Some POST request >>> ${request}`);
+        console.log(`Some POST request >>> ${request}`)
       }}
       errorElement={<Error />}
     />
   )
-);
+)
