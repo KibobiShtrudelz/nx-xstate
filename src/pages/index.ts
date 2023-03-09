@@ -1,1 +1,1 @@
-export * from './films/films';
+export * from './home-page/home.page'
