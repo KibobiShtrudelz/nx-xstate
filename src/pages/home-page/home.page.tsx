@@ -44,6 +44,12 @@ export function Home(): JSX.Element {
           itemTemplate={imageTemplate}
         />
       </section>
+
+      <section className={styles.content}>
+        <p>waza</p>
+        <p>maza</p>
+        <p>praza</p>
+      </section>
     </div>
   )
 }
