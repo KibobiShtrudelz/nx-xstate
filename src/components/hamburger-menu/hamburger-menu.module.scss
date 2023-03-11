@@ -1,0 +1,34 @@
+.hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding: 0.25rem;
+  margin-left: auto;
+
+  .stick {
+    width: 30px;
+    border-radius: 1rem;
+    border: 3px solid #333;
+
+    &.open {
+      width: 34px;
+      transform: rotate(0deg) translate(0px, 0px);
+      transition: all 0.5s;
+
+      &:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+        transition: transform 0.5s;
+      }
+
+      &:nth-child(2) {
+        border-color: transparent;
+      }
+
+      &:last-child {
+        transform: rotate(-45deg) translate(8px, -9px);
+        transition: transform 0.5s;
+      }
+    }
+  }
+}
