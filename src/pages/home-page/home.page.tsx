@@ -34,7 +34,7 @@ export function Home(): JSX.Element {
   return (
     <div className={styles.homePage}>
       <section className={styles.hero}>
-        <Carousel
+        {/* <Carousel
           circular
           numScroll={1}
           numVisible={1}
@@ -42,7 +42,7 @@ export function Home(): JSX.Element {
           showNavigators={false}
           autoplayInterval={4000}
           itemTemplate={imageTemplate}
-        />
+        /> */}
       </section>
 
       <section className={styles.content}>

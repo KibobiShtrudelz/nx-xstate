@@ -16,7 +16,7 @@ export function HamburgerMenu(): JSX.Element {
     <div className={styles.hamburgerMenu} onClick={handleMenuClick}>
       <div className={clsx(styles.stick, isOpen && styles.open)} />
 
-      <div className={clsx(styles.stick, isOpen && styles.open)} />
+      <div className={clsx(styles.stick, styles[isOpen ? 'open' : 'close'])} />
 
       <div className={clsx(styles.stick, isOpen && styles.open)} />
     </div>

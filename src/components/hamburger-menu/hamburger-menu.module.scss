@@ -6,28 +6,53 @@
   padding: 0.25rem;
   margin-left: auto;
 
+  @keyframes open-ham-menu {
+    from {
+      left: 0;
+    }
+
+    to {
+      left: 200px;
+    }
+  }
+
+  @keyframes close-ham-menu {
+    from {
+      left: -50px;
+    }
+
+    to {
+      left: 0px;
+    }
+  }
+
   .stick {
-    width: 30px;
+    width: 34px;
+    height: 4px;
     border-radius: 1rem;
-    border: 3px solid #333;
+    background-color: #333;
+    transform: rotate(0deg) translate(0px, 0px);
+    transition: transform 0.5s ease;
+
+    &.close {
+      position: relative;
+      animation: close-ham-menu 0.5s forwards;
+    }
 
     &.open {
-      width: 34px;
-      transform: rotate(0deg) translate(0px, 0px);
-      transition: all 0.5s;
-
-      &:first-child {
-        transform: rotate(45deg) translate(8px, 8px);
-        transition: transform 0.5s;
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px);
+        transition: transform 0.5s ease;
       }
 
       &:nth-child(2) {
-        border-color: transparent;
+        position: relative;
+        animation: open-ham-menu 2s forwards;
       }
 
-      &:last-child {
+      &:nth-child(3) {
         transform: rotate(-45deg) translate(8px, -9px);
-        transition: transform 0.5s;
+        transition: transform 0.5s ease;
       }
     }
   }
