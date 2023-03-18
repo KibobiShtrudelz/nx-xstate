@@ -16,6 +16,8 @@
     "paths": {
       "@pages": ["pages/index"],
       "@router": ["router/router"],
+      "@context": ["context/index"],
+      "@providers": ["providers/index"],
       "@components": ["components/index"]
     },
     "jsx": "react-jsx",

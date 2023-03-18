@@ -6,4 +6,5 @@ export * from './header/header'
 export * from './hamburger-menu/hamburger-menu'
 
 // Primereact Components
+export * from './__primereact/sidebar'
 export * from './__primereact/carousel'
