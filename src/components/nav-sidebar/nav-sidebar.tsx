@@ -1,25 +1,28 @@
+import { useTranslation } from 'react-i18next'
+
 import { Sidebar } from '@components'
 
 import { NavMachineContext } from '../../context'
 
-export function NavSidebar(): JSX.Element {
+export const NavSidebar = (): JSX.Element => {
   const [state, send] = NavMachineContext.useActor()
+
+  const { t } = useTranslation()
 
   const isSidebarVisible = state.value === 'visible'
 
+  const onHideSidebar = () => send(`HIDE_SIDEBAR`)
+
   return (
     <Sidebar
-      modal={false}
       position="left"
       showCloseIcon={false}
       style={{ width: '75%' }}
       visible={isSidebarVisible}
-      onHide={() => {
-        send(`HIDE_SIDEBAR`)
-      }}
+      onHide={onHideSidebar}
     >
       <div>
-        <h2>Left Sidebar</h2>
+        <h2>{t('navMenu.laptops')}</h2>
 
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
