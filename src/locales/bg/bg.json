@@ -1,0 +1,10 @@
+{
+  "navMenu": {
+    "desks": "Бюра",
+    "laptops": "Лаптопи",
+    "desktops": "Настолни компютри",
+    "monitors": "Монитори",
+    "perifery": "Периферия",
+    "gamingChairs": "Геймърски Столове"
+  }
+}
