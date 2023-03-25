@@ -15,9 +15,9 @@ interface AuthEvents {
 }
 
 const authMachine = createMachine<InitialState, AuthEvents>({
-  schema: {
-    events: {} as { type: 'LOG_IN' } | { type: 'LOG_OUT' }
-  },
+  // schema: {
+  //   events: {} as { type: 'LOG_IN' } | { type: 'LOG_OUT' }
+  // },
 
   initial: 'unauthorized',
 
@@ -37,11 +37,6 @@ const authMachine = createMachine<InitialState, AuthEvents>({
           target: 'authorized'
         }
       }
-    }
-  },
-  services: {
-    authCheck: () => {
-      return true
     }
   }
 })
