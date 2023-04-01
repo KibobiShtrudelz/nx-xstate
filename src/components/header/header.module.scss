@@ -1,11 +1,17 @@
+@import '../../assets/scss/style-constants';
+
 .header {
+  position: fixed;
+  inset: auto 0;
+
   display: flex;
   align-content: center;
 
   overflow: hidden;
-  height: clamp(50px, 80px, 100px);
+  height: $headerHeight;
+  padding: $mainPadding;
+  background-color: #fff;
   box-shadow: 0px 0px 5px 0px #333;
-  padding: clamp(0.5rem, 1rem, 1.5rem);
 
   .brand {
     display: flex;

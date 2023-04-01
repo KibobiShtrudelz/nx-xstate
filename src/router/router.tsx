@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 
 import { Error } from '@components'
-import { Home, XState } from '@pages'
+import { Home, XState, TodoPage } from '@pages'
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +25,7 @@ export const router = createBrowserRouter(
       />
 
       <Route path="/xstate" element={<XState />} errorElement={<Error />} />
+      <Route path="/todo" element={<TodoPage />} errorElement={<Error />} />
     </>
   )
 )

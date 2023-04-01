@@ -1,3 +1,9 @@
+@import '../../assets/scss/style-constants';
+
 .main {
+  position: absolute;
+  inset: $headerHeight 0 0 0;
+
   overflow-y: auto;
+  padding: $mainPadding;
 }
