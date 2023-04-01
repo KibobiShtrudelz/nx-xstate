@@ -1,27 +1,9 @@
-import { useMachine } from '@xstate/react'
-
-import { todoPageMachine } from './todo-page-machine/todo-page-machine'
+import { useTodoPage } from './hooks/use-todo-page'
 
 import styles from './todo-page.module.scss'
 
-const todos = new Set<string>([])
-
 export function TodoPage(): JSX.Element {
-  const [state, send] = useMachine(todoPageMachine, {
-    services: {
-      loadTodos: async () => {
-        return Array.from(todos)
-      },
-
-      saveTodo: async (context, _event) => {
-        todos.add(context.createNewTodoFormInput)
-      },
-
-      deleteTodo: async (_context, event) => {
-        todos.delete(event.todo)
-      }
-    }
-  })
+  const { send, state } = useTodoPage()
 
   return (
     <div className={styles.todoPage}>
